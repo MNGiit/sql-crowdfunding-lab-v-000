@@ -34,7 +34,7 @@ FROM projects
 JOIN pledges
 ON projects.id = pledges.project_id
 GROUP BY projects.title
-WHERE
+HAVING
 SUM(plediges.amount) - projects.funding_goal >= 0;"
 end
 
